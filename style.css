@@ -1,0 +1,154 @@
+/* Estilos gerais */
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background: rgb(253,187,29);
+    background: linear-gradient(180deg, rgba(253,187,29,1) 0%, rgba(255,125,10,1) 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #555;
+}
+
+img {
+    width: 350px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    margin: 10 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+thead {
+    background-color: #ff7f50;
+    color: white;
+}
+
+thead th {
+    padding: 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #ffefeb;
+}
+
+tbody td {
+    padding: 12px;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Imagem dos produtos */
+tbody td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Campo de quantidade */
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+/* Valor total da compra */
+#total-compra {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #d45d2d;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffe3dc;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 20px auto;
+}
+
+/* Efeitos de animação para a tabela e total de compra */
+tbody tr:hover td {
+    background-color: #ffdacb;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#total-compra {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#total-compra:hover {
+    background-color: #ffccbb;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td, th {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    input[type="number"] {
+        width: 40px;
+    }
+
+    #total-compra {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
